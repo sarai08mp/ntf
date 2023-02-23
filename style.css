@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+:root {
+  --bodyblue: #0D1A2D;
+  --shadow: #0C1729;
+  --blue: #15273F;
+  --white: #FDFEFF;
+  --ligthblue: #8BA1C3;
+  --turquoise: #39DEE8;
+  --tuquoisealpha: rgba(57, 222, 232, 0.5);
+  --font: 'Roboto', sans-serif;
+}
+
+/* ||Genarl Style */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  color: var(--ligthblue);
+  background: var(--bodyblue);
+  block-size: 100vh;
+  font-size: 1.4rem;
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+h1+p {
+  font-weight: 300;
+}
+
+/* ||Utility style */
+
+.link {
+  color: var(--white);
+  text-decoration: 0;
+}
+
+.link:link,
+.link:visited {
+  color: var(--white);
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  color: var(--turquoise);
+}
+
+/* ||ntf style */
+
+.ntf {
+  background: var(--blue);
+  inline-size: 20%;
+  block-size: 70%;
+  box-sizing: border-box;
+  padding: 2rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+/* ||image style */
+
+.image {
+  display: block;
+  max-inline-size: 100%;
+  /*   block-size: 60%; */
+  block-size: 50%;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  position: relative;
+}
+
+.image:hover::after {
+  content: '';
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  background: var(--tuquoisealpha) url(https://cdn-icons-png.flaticon.com/512/8278/8278393.png) no-repeat 50% 50%/20%;
+  position: absolute;
+  top: 0px;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+
+}
+
+
+.image img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+/* ||details style */
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  padding-block-end: 2rem;
+  border-block-end: 0.1rem solid var(--ligthblue);
+}
+
+.details p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.details span {
+  color: var(--turquoise);
+  font-weight: bold;
+}
+
+.details p:first-child::before {
+  content: ' ';
+  display: inline-block;
+  block-size: 1rem;
+  inline-size: 1rem;
+  background: url(https://cdn-icons-png.flaticon.com/512/6411/6411743.png);
+  background-size: 1rem 1rem;
+  margin-inline-end: 0.5rem;
+}
+
+.details p:last-child::before {
+  content: ' ';
+  display: inline-block;
+  block-size: 1rem;
+  inline-size: 1rem;
+  background: url(https://cdn-icons-png.flaticon.com/512/9639/9639612.png);
+  background-size: 1rem 1rem;
+  margin-inline-end: 0.5rem;
+}
+
+/* ||creator style */
+
+.creator {
+  display: flex;
+  align-items: center;
+  margin-block-start: 1rem;
+}
+
+.creator span::before {
+  content: '';
+  display: inline-block;
+  block-size: 3rem;
+  inline-size: 3rem;
+  background: url(https://cdn-icons-png.flaticon.com/512/9561/9561550.png);
+  background-size: 3rem 3rem;
+  margin-inline-end: 1rem;
+  border: 0.1rem solid var(--white);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
